@@ -14,9 +14,15 @@
     <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
 <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
 <script>
-const heading = React.createElement('p',{}, 'assalamualikum all')
+    const heading1 = React.createElement('h1',{key:1}, 'assalamualikum all')
+    
+    const heading2 = React.createElement('h2',{key:2}, 'alikumassalamu ')
+    const div = React.createElement('p',{key:4}, [heading1, heading2])
+
+const hrefTag = React.createElement('a',{href: 'www.google.com',key:2,  target:"_blank", rel:"noopener noreferrer"}, "to redirect google")
+
  const root = ReactDOM.createRoot(document.getElementById("root"))
- root.render(heading)
+ root.render([hrefTag, div])
 </script>
 </body>
 </html>
